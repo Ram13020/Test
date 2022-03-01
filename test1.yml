@@ -1,6 +1,8 @@
-- name: Hello World Sample
+- name: Install 
   hosts: all
   tasks:
-    - name: Hello Message
-      debug:
-        msg: "Hello World!"
+    - name: Install git
+      win_chocolatey:
+        name: git
+        state: present
+        force: yes
