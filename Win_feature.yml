@@ -1,0 +1,11 @@
+- name: Install IIS (Web-Server only)
+  ansible.windows.win_feature:
+    name: Web-Server
+    state: present
+
+- name: Install IIS (Web-Server and Web-Common-Http)
+  ansible.windows.win_feature:
+    name:
+    - Web-Server
+    - Web-Common-Http
+    state: present
